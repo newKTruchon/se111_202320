@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Katie Truchon, the coolest" >
+    <meta name="description" content="W2D2 Bio Assignment Demo" >
+    
+    <title>W2 | Bio</title>
+
+    <!--IN-DOCUMENT STYLING-->
+    <style>
+        /*in here we write in CSS*/
+
+        /*SELECTING in CSS & Javascript: select specific element(s) on a page
+
+            *by ELEMENT/TAG type        ex: body, div, p
+            *by ID attribute            ex: #wrapper, #nav, #footer, #title
+            *by CLASS attribute         ex: coming in week 3 :]
+        */
+
+        div { /*applies to ALL divs on the page*/
+
+            border:1px solid black;
+            padding:10px; /*adds 10px of space to all 4 sides of the element, between its content and its border*/
+            margin:5px;/*adds 5px of space to all 4 sides between other elements*/
+            
+        }
+
+
+        #nav {/* # specifies ID name, only applies to single element with that ID*/
+
+            background-color:rgb(200, 200, 200);
+
+        }
+
+    </style>
+
+</head>
+<body style="background-color:grey">
+    <div id="wrapper"><!--"wraps around" all content on page-->
+
+        <h1>Katharine M. Truchon</h1>
+
+        <!--NAV SECTION-->
+        <div id="nav">
+            <!--ID Names can only be used 1x per page-->
+
+            <!--linking to OUTSIDE pages [not part of your website] you need FULL PATH-->
+            <a href="https://www.meca.edu/" target="_blank">Visit MECA</a>
+            <!--href holds the URL of web page you are linking to-->
+            <!--target="_blank" opens in link new tab in browser-->
+
+            <!--IN-PAGE JUMP LINKs: linking to sections within the actual page itself-->
+            <a href="#bio">BIO</a>
+            <a href="#school">SCHOOLING</a>
+            <a href="#hobbies">HOBBIES</a>
+            <a href="#footer">Bottom of Page</a>
+
+        </div><!--/#nav-->
+
+        <!--BIO SECTION-->
+        <div id="bio">
+
+            <h2>About Me</h2>
+
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.  A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+
+            <!--IMAGE TAG-->
+            <!--remote image link example (absolute path BOOOOOOOOO! NOT! SAFE!)-->
+            <img src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/game-of-thrones/c/c5/Eddard_stark_and_ice.jpg" alt="Eddard Stark holding Ice the great sword contemplating a recent beheading" style="width:500px">
+
+            <!--RELATIVE img link example-->
+            <!--relative means: resource (file) exists WITHIN the ROOT FOLDER-->
+            <img src="images/stormsEnd.jpg" alt="illustration of Storm's End from Westeros" style="width:500px">
+
+        </div><!--/#bio-->
+
+        <!--SCHOOLING SECTIO-->
+        <div id="school">
+
+            <h2>Schooling</h2>
+
+            <ol>
+                <li>School 1</li>
+                <li>School 2</li>
+                <li>School 3</li>
+            </ol>
+
+            <img src="images/meca.jpg" alt="MECA Porteous building facade" style="width:500px">
+
+        </div><!--/#school-->
+
+        <!--HOBBIES SECTION-->
+        <div id="hobbies">
+
+            <h2>Hobbies</h2>
+
+            <ul>
+                <li>Hobby 1</li>
+                <li>Hobby 2</li>
+                <li>Hobby 3</li>
+                <li><a href="https://www.imdb.com/title/tt0086765/">Murder, She Wrote!</a></li>
+            </ul>
+
+        </div><!--/#hobbies-->
+
+        <!--FOOTER SECTION-->
+        <div id="footer">
+
+            <a href="#wrapper">Back to Top of Page</a>
+            <p>&copy; 2023 | K TRUCHON | SE111.02 [202320]</p>
+
+            <!--VALIDATION IMAGE SCREENSHOT BELOW-->
+            <img src="images/valid.PNG" alt="validation screenshot" style="width:100%">
+
+        </div><!--/#footer-->
+    </div><!--/ end of main div-->
+
+</body>
+</html>
