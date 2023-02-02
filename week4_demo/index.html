@@ -8,6 +8,8 @@
     <meta name="author" content="K TRUCHON">
     <meta name="description" content="W4 Demo">
 
+    <link rel="stylesheet" type="text/css" href="empire.css">
+
     <title>W4 Movie | ABOUT</title>
 
 </head>
@@ -19,6 +21,8 @@
         <!--HEADER-->
         <div id="header">
 
+            <img src="images/castRoof.jpg" alt="cast of Empire Records on rooftop" width="100%">
+
             <h1><em>Empire Records</em></h1>
             <h4>"Open til midnight!"</h4>
 
@@ -27,15 +31,16 @@
         <!--NAV-->
         <div id="nav">
 
-            <a href="index.html">| ABOUT |</a>
-            <a href="cast.html">| CAST |</a>
-            <a href="review.html">| REVIEW |</a>
+            <div id="btn-nav">
 
-            <br>
-            <br>
+                <a href="index.html" class="btn">ABOUT</a>
+                <a href="cast.html" class="btn">CAST</a>
+                <a href="review.html" class="btn">REVIEW</a>
 
-            <a href="#footer">Bottom of page</a>
+                
 
+                <a href="#footer" class="btn" id="bottom-btn">BOTTOM</a>
+            </div><!--/ #btn-nav-->
         </div><!--/ #nav-->
 
         <hr>
@@ -50,7 +55,7 @@
                 <!--specific content for this page goes here-->
                 <p>Brief synopsis of movie written <i>in my own words</i>.</p>
 
-                <img src="images/poster.jpg" alt="The official movie poster for the 1995 film Empire Records" title="Damn the man, save the Empire!" style="width:500px">
+                <img src="images/poster.jpg" alt="The official movie poster for the 1995 film Empire Records" id="poster" title="Damn the man, save the Empire!" style="width:500px">
 
                 <div class="info">
 
@@ -67,16 +72,18 @@
         <div id="footer">
 
             <!--link user back to the top of THIS current page-->
-            <a href="#header">Back to Top!</a>
+            <p><a href="#header"class="btn">TOP!</a></p>
 
             <br>
 
-            <p>&copy; K TRUCHON | SE111.22 | Winter 2023</p>
+            <p id="copy">&copy; K TRUCHON | SE111.22 | Winter 2023</p>
 
             <!--***TO ADD*** validation screenshot of THIS page-->
             <img src="images/validation/index.PNG" alt="this page validation">
 
         </div><!--/ #footer-->
+
+        <div id="clear"></div>
 
     </div><!--/ #container-->
 </body>

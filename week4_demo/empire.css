@@ -1,0 +1,121 @@
+@font-face {
+    font-family: neon;
+    src: url(fonts/She-Stole-the-Night.ttf);
+}
+
+body {
+    background-color:darkgrey;
+    background-image: url(images/records.jpg);
+    color:lightgrey;
+
+    
+}
+
+#container {
+
+    width:900px;
+    margin:auto;
+    border-radius:20px;
+    padding:10px;
+    box-shadow:0 0 8px black;
+    background-color:rgba(0, 0, 0, 0.9);
+}
+
+div {
+    border:1px solid black;
+    border-radius: 15px;
+    padding:20px;
+    margin:10px 0;
+
+}
+
+/*HEADER------------------------------------------*/
+#header {
+    text-align:center;
+    margin-bottom:none;
+}
+
+h1 {
+    font-family:neon;
+}
+
+/*NAVIGAGTION-------------------------------------*/
+
+#nav {
+    background-image: url(images/recTex.jpg);
+}
+
+#btn-nav {
+
+    /*border:1px solid blue;*/
+    margin-top:none;
+    height:45px;
+    width:529px;
+    margin:auto;
+    border:none;
+}
+
+.btn {
+    float:left;
+    width:110px;
+    height:50px;
+    line-height:50px;
+    border:none;
+    display:block;
+    text-align:center;
+    margin-right:20px;
+    background-color:white;
+    color:black;
+    font-size:14px;
+    font-family: neon;
+}
+
+.btn:hover {
+    background-image: url(images/btn_hover.PNG);
+    color:rgb(254, 236, 133);
+    background-position:center;
+}
+
+#footer .btn {
+    margin-left:400px;
+    margin-bottom:25px;
+}
+
+#copy {
+
+    margin:10px 0;
+    text-align:center;
+}
+
+/*MAIN CONTENT------------------------------------*/
+#content {
+    clear:both;
+}
+
+h2 {
+    text-align:center;
+    color:rgb(254, 236, 133);
+    font-family:neon;
+}
+
+#poster {
+
+    border:1px solid black;
+    background-color:lightgray;
+    box-shadow:0 0 8px black;
+    padding:20px;
+    border-radius:10px;
+    margin-left:120px;
+}
+
+/*FOOTER------------------------------------------*/
+#footer {
+    float:left;
+    font-size:10px;
+    text-align:center;
+
+}
+
+#clear {
+    clear:both;
+}
