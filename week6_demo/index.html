@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="K TRUCHON">
+    <meta name="description" content="W6 Demo | Intro to JS">
+
+    <title>W6 | Intro to JS</title>
+</head>
+<body>
+    
+    <!--we should have some type of HTML in the file to start-->
+    <h1>W6 Demo | Introduction to JavaScript</h1>
+
+
+    <!--script tags usually go after all of the intended HTML (body of bottom)-->
+    <!--IN DOCUMENT: means the code lives directly in the file, within appropriate tags - <script> for JS or <style> for CSS-->
+    <script>
+
+        //everything inside of the <script> tags MUST be writtin in JS
+        
+        //creating a variable - requires DECLARATION in order to create/use names 
+        var num1 = 10
+        var num2 = 7
+
+        var sum = num1 + num2
+
+        /*to access developer tools and the console:
+                *F12 on keyboard
+                or
+                *triple dots for browser menu (upper right hand corner)
+                    move to console panel
+        */
+
+        //console.log() is used for DEVELOPMENT TESTING != user display
+        console.log(sum) //displays stored value
+        console.log("Hello World!") //displays simple string
+
+        //displaying both stored data and string message
+        console.log("Hello World! The sum is: " + sum + "Cool, right?") //long way :[
+        //LITERAL STRINGS :D super powerful string types 
+        console.log(`Hello World! Ths sum is: ${sum}. \n\n\nCool, right?`)//fun way :]
+
+        //escapse sequence for new line \n or \t for tab still works in strings
+
+
+        //alert() creates a pop-up with data display for USER to see
+        //alert() --> print() in Python for OUTPUT
+        //user must click the button in the pop-up before code will continue
+        //alert(`The sum is: ${sum}!`)
+        console.log("HI")
+        //alert(sum)
+        console.log("HELLO")
+        //alert(`The sum is: $${sum.toFixed(2)}`) //displaying rounded decimal
+        console.log("HOWDY")
+
+        //prompt() creates a pop-up with data display and also a text field input - allows the user to enter data to be used later in the <script>
+        //prompt() --> input() in Python for INPUT
+
+        //to use the value provided by the user we must ASSIGN TO A VAR
+        var nameF = prompt(`Enter your first name: `)
+        var nameL = prompt(`Thanks ${nameF}! Please enter your last name: `)
+        console.log(nameL)
+
+        //if browser treats prompt() return as a string, cast Number() to use in math
+        var num = Number(prompt(`Enter a number: `))
+        //similar in Python to: num = int(input("Enter a number: "))
+
+        var square = num * num 
+
+        console.log(square.toFixed(2))
+
+
+    </script>
+
+
+
+</body>
+</html>
