@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>W6 | Homework</h1>
+
+    <script>
+
+        var rate = Number(prompt(`Enter your hourly rate: $`))
+        var hours = Number(prompt(`Enter your hours worked: $`))
+
+        var gross = rate * hours 
+        var tax = gross * 0.2
+        var net = gross - tax 
+
+        alert(`Based on your hourly rate of $ ${rate} and ${hours} worked:\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${tax.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
+
+        console.log(`Based on your hourly rate of $ ${rate} and ${hours} worked:\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${tax.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
+
+    </script>
+</body>
+</html>
