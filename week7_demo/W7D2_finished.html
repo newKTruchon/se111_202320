@@ -104,54 +104,56 @@
     <p>end</p>
     <!--IN-DOCUMENT JAVASCRIPT BELOW-->
     <script>
-        
-        //selecting elements from the HTML doc --> 'document' current HTMl file
-        //the body element
-        //global variable: var declared outside of a function
-        var body = document.querySelector(`body`)
+        //selecting elements from the HTML document --> 'document' current HTML file 
+        //global variable: accessible everywhere after its creation
+        var body = document.querySelector(`body`) //selecting by HTML tag name
 
-        console.log(body) //for TESTING 
+        console.log(body) //testing in the browser console -- TESTING
 
-        //create a new variable to hold a NEW HTML element
-        //global variable 'newP'
+        //create a new variable to hold a new HTML element
+        //global variable newP
         var newP = ``
-        newP += `<h2>` //newP = newP + `<p>`
+        newP += `<p>` //newP = newP + `<p>`
         newP += `hello world! this content was added to the page using JavaScript!`
-        newP += `</h2>`
+        newP += `</p>`
 
         console.log(newP)
 
         //adding new HTML element info (built in JS) to the *end* of the body element
-        //.innerHTML is an attribute all HTML elements with open and close tags have
-        body.innerHTML += newP 
+        //.innerHTML is an attribute all HTML elements with open and close tags
+        body.innerHTML += newP //body.innerHTML = body.innerHTML + newP
 
-        console.log(body) //for TESTING 
-
-        //accessing HTML attributes 
+        //accessing HTML attributes
         body.id = `main-body`
-        console.log(body) //for TESTING 
+        console.log(body)
 
-        //set up an actionable event so that when the #enter-button is clicked, information is written to the page. FIRST: add event listener to the button for the event (action)
+
+        //set up an actionable event so that when a button is clicked, information is written to the page. FIRST: add event listener for event (action)
+        //adding an event listern to the #enter-button at end of the mini form
         document.querySelector(`#enter-button`).addEventListener(`click`, alertInfo)
 
+        //alertInfo() functiond definition is below - must include e/ev/event
+        //requires the 'e' parameter to hold event data
         function alertInfo(e)
         {
             //local variables: their value only exists inside of alertInfo()
-            //these local vars will hold the VALUES from the mini form input elements
-            var fname = document.querySelector(`#first`).value
-            var lname = document.querySelector(`#last`).value
+            //these local variables will hold the VALUES from the mini form
+            var fname = document.querySelector(`#first`).value 
             console.log(fname)
-            console.log(lname)
-
-            var age = Number(document.querySelector(`#age`).value)
+            var lname = document.querySelector(`#last`).value
+            var age = document.querySelector(`#age`).value
 
             console.log(fname, lname, age)
 
-            //once values have been stored, we can use em!
-            var full = fname + ` ` + lname
-            //alert(`hi there ${full}!`)
-/*
-            if(age >= 18)//must include () for JS conditions
+            //numbers from input need to be cast! 
+            age = Number(age)
+            console.log(fname, lname, age)
+
+            //once values are stored, we can use them! 
+            var full = fname + ` ` + lname 
+            alert(`Hi there ${full}!`)
+
+            if(age >= 18) //must include parenthesis for JS conditions
             {
                 alert(`you are old enough to vote!`)
             }
@@ -159,28 +161,29 @@
             {
                 alert(`you are too young to vote!`)
             }
-*/
-            //select the #hello element and add the user's full name to it directly in the page 
-            var hello = document.querySelector(`#hello`)
 
-            //change the hello text to include user's name:
-            hello.innerHTML += ` ${full}!`
 
-            //document.querySelector(`#hello`).innerHTML += ` ${full}!`
+            //select the #hello element and add the user's name to it directly in the page
+            var hello = document.querySelector(`#hello`) 
+            //all of the #hello element is now stored in 'hello'
 
-            //calculate age in dog and cat years 
+            //change the #hello text to add the user's name:
+            hello.innerHTML += ` ${full} !`
+
+            //store HTML element #info into a var to use
+            var info = document.querySelector(`#info`)
+
+            //calculate age in dog and cat years
             var dog_age = (age * 7).toFixed(1)
             var cat_age = (age * 4).toFixed(1)
 
             //test values before writing to the HTML 
-            console.log(`Dog Age: ${dog_age} yrs \nCat Age: ${cat_age} yrs`)
+            console.log(`Dog Age: ${dog_age} yrs\nCat Age: ${cat_age} yrs`)
 
-            //store the element where we will write the new HTML content to and then edit is innerHTML 
-            var info = document.querySelector(`#info`)
-            info.innerHTML += `<p> Here is some info on the age you entered :] <br><br> Dog Age: ${dog_age} yrs <br> Cat Age: ${cat_age} yrs </p>`
+            //add the new age data to the #info element
+            info.innerHTML += `<p><br>Here is some info on the age you enetered :] <br> <br> YOUR AGE: ${age} <br> <br> Dog Age: ${dog_age} yrs <br> Cat Age: ${cat_age} yrs </p>`
 
-
-        }//alertInfo() CLOSE
+        }//END of alertInfo()
 
         //global variables - can be used in any function AFTER this 
         var me = document.querySelector(`#me`)
@@ -188,15 +191,13 @@
 
         console.log(me)
 
-        //adding event listener to non-button elements
+        //adding event listeners to non-button elements
         me.addEventListener(`click`, clicked)
 
         function clicked(e)
         {
-            console.log(`clicked() reached!`)
-
+            console.log(`clicked() reached`)
             me.style.color = "red"
-            me.style.fontSize = `84px`
         }
 
         you.addEventListener(`click`, greenClick)
@@ -204,43 +205,42 @@
 
         function greenClick(e)
         {
-            console.log(`greenClick() reached!`)
+            console.log(`greenClicked() reached`)
+
             clickCount += 1
 
-            if(clickCount == 1)
+            var remainder = clickCount % 2
+
+            if(clickCount === 1)
             {
-                you.style.color = `rgb(0, 255, 0)`
+                you.style.color = "rgb(0, 255, 0)"
+                you.style.backgroundColor = `red`
+            }
+            else if(remainder === 0)
+            {
+                you.style.color = "rgb(0, 0, 0)"
+                you.style.backgroundColor = `white`
+            }
+            else
+            {
+                you.style.color = "rgb(0, 255, 0)"
                 you.style.backgroundColor = `black`
             }
-            else if(clickCount == 2)
-            {
-                you.style.color = `rgb(255, 0, 0)`
-
-            }
-            else if(clickCount == 3)
-            {
-                you.style.color = `rgb(0, 0, 255)`
-
-            }
-            else 
-            {
-                you.style.color = `black`
-                you.style.backgroundColor = `grey`
-                clickCount = 0
-            }
-        }//end of greenClick()
+            
+        }//END of greenClick()
 
         //selecting another button on the page 
         var button = document.querySelector(`#submit`)
 
-        //anonymous/call back function below - has NO name, we immediately write the function definition as a part of the greater function call - used when the function will not be reused 
-        button.addEventListener(`click`, function(event){
-
-            //check out the event parameter!
+        //demoing an anonymous function - has no name, immediately writes the function definition - used when the function will not be reused outside of the one specific time 
+        button.addEventListener(`click`, function(event)
+        {
+            //check out the event parameter in the console
             console.log(event)
 
-            }//end of the anonymous function
-        )//end of event listener call
+        }//END of anonymous function
+
+        )//END of button.addEventListener()
 
 	</script>
 	
